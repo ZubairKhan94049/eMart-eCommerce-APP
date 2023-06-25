@@ -5,19 +5,23 @@ class SmallText extends StatelessWidget {
     super.key,
     required this.text,
     this.family,
+    this.size,
+    this.color,
   });
 
   final String text;
   final String? family;
+  final double? size;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style:  TextStyle(
-        color: whiteColor,
-        fontSize: 18,
-        fontFamily: family,
+        color: color ?? whiteColor ,
+        fontSize: size ?? 16,
+        fontFamily: family ?? semibold,
       ),
     );
   }

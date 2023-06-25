@@ -1,7 +1,9 @@
 import 'package:e_commerce/consts/consts.dart';
+import 'package:e_commerce/views/auth_screens/login_screen.dart';
 import 'package:e_commerce/widget_common/applogo_widget.dart';
 import 'package:e_commerce/widget_common/largetext_widget.dart';
 import 'package:e_commerce/widget_common/smalltext_widget.dart';
+import 'package:get/route_manager.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,6 +13,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  changeScreen(){
+    Future.delayed(const Duration(seconds: 3),(){
+      Get.to(()=>const LoginScreen());
+    });
+  }
+  @override
+  void initState() {
+    changeScreen();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
