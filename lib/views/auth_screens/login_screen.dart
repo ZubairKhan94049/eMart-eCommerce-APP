@@ -1,9 +1,11 @@
 import 'package:e_commerce/consts/consts.dart';
 import 'package:e_commerce/consts/lists.dart';
+import 'package:e_commerce/views/auth_screens/signup_screen.dart';
 import 'package:e_commerce/widget_common/applogo_widget.dart';
 import 'package:e_commerce/widget_common/bg_widget.dart';
 import 'package:e_commerce/widget_common/largetext_widget.dart';
 import 'package:e_commerce/widget_common/smalltext_widget.dart';
+import 'package:get/route_manager.dart';
 
 import '../../widget_common/custom_button_widget.dart';
 import '../../widget_common/customtextfield_widget.dart';
@@ -73,7 +75,9 @@ class LoginScreen extends StatelessWidget {
                       title: "Log In",
                       bgColor: redColor,
                       titleColor: whiteColor,
-                      onPress: () {},
+                      onPress: () {
+                        // Get.to(() => const SignupScreen());
+                      },
                     ),
                   ),
                   const SizedBox(
@@ -92,7 +96,9 @@ class LoginScreen extends StatelessWidget {
                       title: "Sign up",
                       bgColor: lightGolden,
                       titleColor: redColor,
-                      onPress: () {},
+                      onPress: () {
+                        Get.to(() => const SignupScreen());
+                      },
                     ),
                   ),
                   const SizedBox(
