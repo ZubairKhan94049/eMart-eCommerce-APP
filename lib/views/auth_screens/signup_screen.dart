@@ -1,18 +1,21 @@
-import 'package:e_commerce/consts/lists.dart';
 import 'package:e_commerce/widget_common/applogo_widget.dart';
 import 'package:e_commerce/widget_common/bg_widget.dart';
 import 'package:e_commerce/widget_common/custom_button_widget.dart';
 import 'package:e_commerce/widget_common/customtextfield_widget.dart';
 import 'package:e_commerce/widget_common/largetext_widget.dart';
-import 'package:e_commerce/widget_common/smalltext_widget.dart';
-import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 
 import '../../consts/consts.dart';
 
-class SignupScreen extends StatelessWidget {
+class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
 
+  @override
+  State<SignupScreen> createState() => _SignupScreenState();
+}
+
+class _SignupScreenState extends State<SignupScreen> {
+  bool? isCheck = false;
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -80,8 +83,12 @@ class SignupScreen extends StatelessWidget {
                     children: [
                       Checkbox(
                           checkColor: redColor,
-                          value: false,
-                          onChanged: (val) {}),
+                          value: isCheck,
+                          onChanged: (val) {
+                            setState(() {
+                              isCheck = val;
+                            });
+                          }),
                       const SizedBox(
                         height: 10,
                       ),
@@ -92,25 +99,25 @@ class SignupScreen extends StatelessWidget {
                               text: "I agree to the ",
                               style: TextStyle(
                                 color: fontGrey,
-                                fontFamily: bold,
+                                fontFamily: regular,
                               )),
                           TextSpan(
                               text: "Terms and Conditions ",
                               style: TextStyle(
                                 color: redColor,
-                                fontFamily: bold,
+                                fontFamily: regular,
                               )),
                           TextSpan(
                               text: " and",
                               style: TextStyle(
                                 color: fontGrey,
-                                fontFamily: bold,
+                                fontFamily: regular,
                               )),
                           TextSpan(
                               text: " Privacy and Poiciy",
                               style: TextStyle(
                                 color: fontGrey,
-                                fontFamily: bold,
+                                fontFamily: regular,
                               )),
                         ])),
                       )
@@ -141,13 +148,13 @@ class SignupScreen extends StatelessWidget {
                           text: "Already have an account? ",
                           style: TextStyle(
                             color: fontGrey,
-                            fontFamily: bold,
+                            fontFamily: regular,
                           )),
                       TextSpan(
                           text: "sign in ",
                           style: TextStyle(
                             color: redColor,
-                            fontFamily: bold,
+                            fontFamily: regular,
                           )),
                     ])),
                   )
