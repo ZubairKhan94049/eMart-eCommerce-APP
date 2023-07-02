@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        FocusScope.of(context).unfocus();
+       FocusManager.instance.primaryFocus?.unfocus();
       },
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false ,
