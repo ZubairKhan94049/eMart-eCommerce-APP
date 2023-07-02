@@ -82,7 +82,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   Row(
                     children: [
                       Checkbox(
-                          checkColor: redColor,
+                          activeColor: redColor,
                           value: isCheck,
                           onChanged: (val) {
                             setState(() {
@@ -130,7 +130,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     width: size.width - 50,
                     child: customButton(
                       title: "Sign up",
-                      bgColor: redColor,
+                      bgColor: isCheck == true ?  redColor  : lightGrey,
                       titleColor: whiteColor,
                       onPress: () {},
                     ),

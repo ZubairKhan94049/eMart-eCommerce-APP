@@ -1,6 +1,7 @@
 import 'package:e_commerce/consts/consts.dart';
 import 'package:e_commerce/consts/lists.dart';
 import 'package:e_commerce/views/auth_screens/signup_screen.dart';
+import 'package:e_commerce/views/navigation_screen/navigation_screen.dart';
 import 'package:e_commerce/widget_common/applogo_widget.dart';
 import 'package:e_commerce/widget_common/bg_widget.dart';
 import 'package:e_commerce/widget_common/largetext_widget.dart';
@@ -76,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                       bgColor: redColor,
                       titleColor: whiteColor,
                       onPress: () {
-                        // Get.to(() => const SignupScreen());
+                        Get.to(() => const NavigationScreen());
                       },
                     ),
                   ),
