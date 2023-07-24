@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                 alignment: Alignment.center,
                 child: TextFormField(
                   decoration: const InputDecoration(
-                    border: InputBorder.none,
+                    border: InputBorder.none  ,
                     filled: true,
                     fillColor: whiteColor,
                     hintText: "Search anthing...",
@@ -155,7 +155,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
                       const LargeText(
                         text: "Featured Categories",
